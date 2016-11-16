@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Deal Finder Deluxe</string>
+    <string name="title_activity_login">LoginActivity</string>
+</resources>
