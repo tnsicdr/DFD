@@ -27,21 +27,21 @@
         android:inputType="textEmailAddress"
         android:ems="10"
         android:layout_marginTop="37dp"
-        android:id="@+id/editText"
         android:layout_below="@+id/textView3"
         android:layout_centerHorizontal="true"
         android:hint="Email"
-        style="@android:style/Widget.DeviceDefault.EditText" />
+        style="@android:style/Widget.DeviceDefault.EditText"
+        android:id="@+id/email_entry" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textPassword"
         android:ems="10"
-        android:id="@+id/editText2"
-        android:layout_below="@+id/editText"
-        android:layout_alignEnd="@+id/editText"
-        android:hint="Password" />
+        android:layout_below="@+id/email_entry"
+        android:layout_alignEnd="@+id/email_entry"
+        android:hint="Password"
+        android:id="@+id/password_entry" />
 
     <Button
         android:text="Facebook"
@@ -49,24 +49,24 @@
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
-        android:id="@+id/button"
-        android:drawableLeft="@drawable/facebook" />
-
-    <Button
-        android:text="Google"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/button3"
-        android:layout_below="@+id/button2"
-        android:layout_alignStart="@+id/button2"
-        android:drawableLeft="@drawable/google" />
+        android:drawableLeft="@drawable/facebook"
+        android:id="@+id/btn_facebook" />
 
     <Button
         android:text="Twitter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/button2"
         android:drawableLeft="@drawable/twitter"
-        android:layout_below="@+id/button"
+        android:id="@+id/btn_twitter"
+        android:layout_below="@+id/btn_facebook"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:text="Google"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/google"
+        android:id="@+id/btn_google"
+        android:layout_below="@+id/btn_twitter"
         android:layout_centerHorizontal="true" />
 </RelativeLayout>
