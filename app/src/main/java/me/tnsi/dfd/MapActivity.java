@@ -7,6 +7,8 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
+import android.support.v4.widget.DrawerLayout;
+import android.widget.ListView;
 import android.widget.Toast;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -21,6 +23,8 @@ import com.google.android.gms.maps.model.MarkerOptions;
 public class MapActivity extends FragmentActivity implements OnMapReadyCallback, OnMarkerClickListener {
 
     private GoogleMap mMap;
+    private DrawerLayout mDrawerLayout;
+    private ListView mDrawerList;
     public static final int MY_PERMISSIONS_REQUEST_FINE_LOCATION = 1;
 
     @Override
@@ -31,6 +35,12 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
+
+        mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
+        mDrawerList = (ListView) findViewById(R.id.left_drawer);
+
+
+
     }
 
 
@@ -46,6 +56,7 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
+        mMap.setOnMarkerClickListener(this);
         if(ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION)== PackageManager.PERMISSION_GRANTED) {
             mMap.setMyLocationEnabled(true);
             mMap.getUiSettings().setMyLocationButtonEnabled(true);
@@ -82,7 +93,10 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
     public boolean onMarkerClick(final Marker marker) {
         String name = marker.getTitle();
         if (name.equalsIgnoreCase("Provisions on Demand")) {
-            Toast.makeText(this, name, Toast.LENGTH_SHORT);
+            Toast.makeText(this, "You're really demanding of those provisions.", Toast.LENGTH_SHORT).show();
+            return true;
+        } else if(name.equalsIgnoreCase("Mandrake's Mangos")) {
+            Toast.makeText(this, "Mandrake has the best mangos.", Toast.LENGTH_SHORT).show();
             return true;
         } else {
             return false;
