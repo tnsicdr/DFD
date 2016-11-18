@@ -55,4 +55,12 @@
         android:layout_marginStart="59dp"
         android:layout_below="@+id/mandrakes"
         android:layout_toEndOf="@+id/fresh" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@mipmap/ic_my_location"
+        android:id="@+id/imageView3"
+        android:layout_above="@+id/provisions"
+        android:layout_alignStart="@+id/mandrakes" />
 </RelativeLayout>

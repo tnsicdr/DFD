@@ -17,7 +17,7 @@ import android.widget.ImageButton;
 import android.widget.Toast;
 
 public class MapActivity2 extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+        implements NavigationView.OnNavigationItemSelectedListener, View.OnClickListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,36 +34,16 @@ public class MapActivity2 extends AppCompatActivity
         toggle.syncState();
 
         ImageButton button1 = (ImageButton) this.findViewById(R.id.mandrakes);
-        button1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(MapActivity2.this, "Mandrakes has the best Mangoes", Toast.LENGTH_SHORT).show();
-            }
-        });
+        button1.setOnClickListener(this);
 
         ImageButton button2 = (ImageButton) this.findViewById(R.id.provisions);
-        button2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(MapActivity2.this, "So many provisions", Toast.LENGTH_SHORT).show();
-            }
-        });
+        button2.setOnClickListener(this);
 
         ImageButton button3 = (ImageButton) this.findViewById(R.id.fresh);
-        button3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(MapActivity2.this, "FRESH!!", Toast.LENGTH_SHORT).show();
-            }
-        });
+        button3.setOnClickListener(this);
 
         ImageButton button4 = (ImageButton) this.findViewById(R.id.einstein);
-        button4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(MapActivity2.this, "I schmeared it for ya", Toast.LENGTH_SHORT).show();
-            }
-        });
+        button4.setOnClickListener(this);
 
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
@@ -105,5 +85,27 @@ public class MapActivity2 extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    @Override
+    public void onClick(View v) {
+        int id = v.getId();
+
+        if (id == R.id.mandrakes){
+            Intent intent = new Intent(MapActivity2.this, MandrakesActivity.class);
+            MapActivity2.this.startActivity(intent);
+        } else if (id == R.id.provisions){
+            Intent intent = new Intent(MapActivity2.this, RestaurantDetailsActivity.class);
+            intent.putExtra("Name", "Provisions on Demand");
+            MapActivity2.this.startActivity(intent);
+        } else if (id == R.id.einstein){
+            Intent intent = new Intent(MapActivity2.this, RestaurantDetailsActivity.class);
+            intent.putExtra("Name", "Einstein Bros");
+            MapActivity2.this.startActivity(intent);
+        } else if (id == R.id.fresh) {
+            Intent intent = new Intent(MapActivity2.this, RestaurantDetailsActivity.class);
+            intent.putExtra("Name", "Fresh");
+            MapActivity2.this.startActivity(intent);
+        }
     }
 }

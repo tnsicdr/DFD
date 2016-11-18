@@ -68,13 +68,33 @@
             android:name=".FiltersActivity"
             android:label="Filters"
             android:parentActivityName=".MapActivity2"
-            android:theme="@style/AppTheme"/>
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".SettingsActivity"
             android:label="Settings"
             android:parentActivityName=".MapActivity2"
             android:theme="@style/AppTheme" />
-
+        <activity
+            android:name=".MandrakesActivity"
+            android:label="Mandrakes Mangos"
+            android:parentActivityName=".MapActivity2"
+            android:theme="@style/AppTheme"/>
+        <activity
+            android:name=".DealCodeActivity"
+            android:label="Deal Redemption Code"
+            android:parentActivityName=".DealsActivity"
+            android:theme="@style/AppTheme"/>
+        <activity
+            android:name=".RestaurantDetailsActivity"
+            android:label="Restaurant Details"
+            android:parentActivityName=".MapActivity2"
+            android:theme="@style/AppTheme"/>
+        <activity
+            android:name=".DealsActivity"
+            android:label="Available Deals"
+            android:parentActivityName=".RestaurantDetailsActivity"
+            android:theme="@style/AppTheme">
+        </activity>
     </application>
 
 </manifest>

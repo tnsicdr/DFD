@@ -24,8 +24,6 @@ public class AboutActivity extends AppCompatActivity {
 
         btnLegal.setOnClickListener(onLegalClickListener);
         btnWeb.setOnClickListener(onWebClickListener);
-
-
     }
 
     private View.OnClickListener onLegalClickListener = new View.OnClickListener() {
