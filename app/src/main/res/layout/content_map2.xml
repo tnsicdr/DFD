@@ -18,20 +18,20 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/ic_map_marker_black_36dp"
-        android:layout_alignBottom="@+id/mandrakes"
-        android:layout_toEndOf="@+id/mandrakes"
         android:layout_marginBottom="14dp"
         android:id="@+id/provisions"
-        android:background="@android:color/transparent"/>
+        android:background="@android:color/transparent"
+        android:layout_alignBottom="@+id/mandrakes"
+        android:layout_toEndOf="@+id/mandrakes" />
 
     <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/ic_map_marker_black_36dp"
-        android:layout_marginStart="60dp"
+        android:layout_marginStart="47dp"
         android:id="@+id/mandrakes"
         android:background="@android:color/transparent"
-        android:layout_marginTop="237dp"
+        android:layout_marginTop="196dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true" />
 
@@ -39,21 +39,20 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/ic_map_marker_black_36dp"
-        android:id="@+id/einstein"
+        android:layout_marginTop="67dp"
+        android:id="@+id/fresh"
         android:background="@android:color/transparent"
-        android:layout_marginStart="74dp"
-        android:layout_marginTop="9dp"
-        android:layout_below="@+id/mandrakes"
-        android:layout_toEndOf="@+id/fresh" />
+        android:layout_marginStart="8dp"
+        android:layout_below="@+id/einstein"
+        android:layout_toEndOf="@+id/provisions" />
 
     <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/ic_map_marker_black_36dp"
-        android:layout_marginTop="86dp"
-        android:id="@+id/fresh"
+        android:id="@+id/einstein"
         android:background="@android:color/transparent"
-        android:layout_marginStart="17dp"
-        android:layout_below="@+id/einstein"
-        android:layout_toEndOf="@+id/provisions" />
+        android:layout_marginStart="59dp"
+        android:layout_below="@+id/mandrakes"
+        android:layout_toEndOf="@+id/fresh" />
 </RelativeLayout>
