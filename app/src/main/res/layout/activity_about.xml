@@ -12,6 +12,18 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="me.tnsi.dfd.AboutActivity">
 
+    <Button
+        android:text="Website"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnWebsite" />
+
+    <Button
+        android:text="Legal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnLegal" />
+
     <TextView
         android:text="Copyright Cohesive Unit Unincorporated 2016"
         android:layout_width="match_parent"
