@@ -53,15 +53,23 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".AboutActivity"
-            android:label="@string/title_activity_about"
+            android:label="Settings"
             android:parentActivityName=".MapActivity2"
             android:theme="@style/AppTheme">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="me.tnsi.dfd.MapActivity2" />
         </activity>
-        <activity android:name=".FiltersActivity" />
-        <activity android:name=".SettingsActivity" />
+        <activity
+            android:name=".FiltersActivity"
+            android:label="Filters"
+            android:parentActivityName=".MapActivity2"
+            android:theme="@style/AppTheme"/>
+        <activity
+            android:name=".SettingsActivity"
+            android:label="Settings"
+            android:parentActivityName=".MapActivity2"
+            android:theme="@style/AppTheme" />
 
     </application>
 
