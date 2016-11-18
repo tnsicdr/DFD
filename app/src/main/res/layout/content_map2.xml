@@ -18,23 +18,33 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/ic_map_marker_black_36dp"
-        android:layout_marginStart="54dp"
-        android:id="@+id/mandrakes"
+        android:layout_marginBottom="14dp"
+        android:id="@+id/provisions"
         android:background="@android:color/transparent"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="201dp" />
+        android:layout_alignBottom="@+id/mandrakes"
+        android:layout_toEndOf="@+id/mandrakes" />
 
     <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/ic_map_marker_black_36dp"
-        android:layout_marginBottom="23dp"
-        android:id="@+id/provisions"
+        android:layout_marginStart="47dp"
+        android:id="@+id/mandrakes"
         android:background="@android:color/transparent"
-        android:layout_marginStart="25dp"
-        android:layout_alignBottom="@+id/mandrakes"
-        android:layout_alignStart="@+id/mandrakes" />
+        android:layout_marginTop="196dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_map_marker_black_36dp"
+        android:layout_marginTop="67dp"
+        android:id="@+id/fresh"
+        android:background="@android:color/transparent"
+        android:layout_marginStart="8dp"
+        android:layout_below="@+id/einstein"
+        android:layout_toEndOf="@+id/provisions" />
 
     <ImageButton
         android:layout_width="wrap_content"
@@ -42,18 +52,7 @@
         app:srcCompat="@drawable/ic_map_marker_black_36dp"
         android:id="@+id/einstein"
         android:background="@android:color/transparent"
-        android:layout_below="@+id/provisions"
-        android:layout_alignParentEnd="true"
-        android:layout_marginEnd="67dp" />
-
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/ic_map_marker_black_36dp"
-        android:layout_marginTop="62dp"
-        android:id="@+id/fresh"
-        android:background="@android:color/transparent"
-        android:layout_below="@+id/einstein"
-        android:layout_toEndOf="@+id/provisions"
-        android:layout_marginStart="10dp" />
+        android:layout_marginStart="59dp"
+        android:layout_below="@+id/mandrakes"
+        android:layout_toEndOf="@+id/fresh" />
 </RelativeLayout>
