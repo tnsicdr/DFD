@@ -1,5 +1,6 @@
 package me.tnsi.dfd;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -54,6 +55,8 @@ public class MapActivity2 extends AppCompatActivity
         } else if (id == R.id.nav_sign_out) {
 
         } else if (id == R.id.nav_about) {
+            Intent intent = new Intent(MapActivity2.this, AboutActivity.class);
+            MapActivity2.this.startActivity(intent);
 
         } else if (id == R.id.nav_filters) {
 
