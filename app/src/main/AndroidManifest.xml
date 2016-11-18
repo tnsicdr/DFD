@@ -51,11 +51,6 @@
             android:name=".MapActivity2"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar" />
-<<<<<<< HEAD
-        <activity android:name=".FiltersActivity" />
-        <activity android:name=".SettingsActivity" />
-        <activity android:name=".AboutActivity"></activity>
-=======
         <activity
             android:name=".AboutActivity"
             android:label="Settings"
@@ -69,14 +64,33 @@
             android:name=".FiltersActivity"
             android:label="Filters"
             android:parentActivityName=".MapActivity2"
-            android:theme="@style/AppTheme"/>
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".SettingsActivity"
             android:label="Settings"
             android:parentActivityName=".MapActivity2"
             android:theme="@style/AppTheme" />
-
->>>>>>> upstream/master
+        <activity
+            android:name=".MandrakesActivity"
+            android:label="Mandrakes Mangos"
+            android:parentActivityName=".MapActivity2"
+            android:theme="@style/AppTheme"/>
+        <activity
+            android:name=".DealCodeActivity"
+            android:label="Deal Redemption Code"
+            android:parentActivityName=".DealsActivity"
+            android:theme="@style/AppTheme"/>
+        <activity
+            android:name=".RestaurantDetailsActivity"
+            android:label="Restaurant Details"
+            android:parentActivityName=".MapActivity2"
+            android:theme="@style/AppTheme"/>
+        <activity
+            android:name=".DealsActivity"
+            android:label="Available Deals"
+            android:parentActivityName=".RestaurantDetailsActivity"
+            android:theme="@style/AppTheme">
+        </activity>
     </application>
 
 </manifest>
